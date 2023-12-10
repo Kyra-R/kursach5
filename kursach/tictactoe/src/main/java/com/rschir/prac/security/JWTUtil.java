@@ -22,7 +22,7 @@ public class JWTUtil {
     public UsernamePasswordAuthenticationToken validateTokenAndRetrieveAuth(String token) throws JWTVerificationException {
         JWTVerifier verifier = JWT.require(Algorithm.HMAC256(secret))
                 .withSubject("User details")
-                .withIssuer("marketplace")
+                .withIssuer("tictactoe")
                 .withClaimPresence("login")
                 .withClaimPresence("role")
                 .withClaimPresence("playerId")
